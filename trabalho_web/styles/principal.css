@@ -1,0 +1,345 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #212529;
+}
+
+header{
+  margin: -10px;
+}
+
+.cabeçalho{
+  background-color: black;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+}
+
+.cabeçalho .konquita_logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.cabeçalho .konquita_logo img{
+  max-width: 300px;
+  position: relative;
+}
+
+.cabeçalho .login_container{
+  position: fixed;
+  top: 40px;
+  right: 20px;
+}
+
+.login_container .login_grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px;
+}
+
+.login_container a{
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.login_grid .login a{
+  color: white;
+  background-color: black;
+  border: solid 1px white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 6px 20px;
+  font-size: 20px;
+}
+
+.login_grid .login a:hover{
+  background-color: white;
+  color: black;
+  transition: all 0.4s ease;
+}
+
+.login_grid .cadastro a{
+  color: black;
+  background-color: white;
+  border: solid 1px transparent;
+  border-radius: 10px;
+  text-align: center;
+  padding: 6px 20px;
+  font-size: 20px;
+}
+
+.login_grid .cadastro a:hover {
+  background-color: rgb(163, 163, 163);
+  color: black;
+  transition: all 0.4s ease;
+}
+
+.echo_user .user_grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.echo_user .bv_user {
+  color: white;
+  background-color: transparent;
+  text-align: center;
+  font-size: 20px;
+}
+
+.echo_user img{
+  max-width: 25px;
+  filter: invert(100%);
+  cursor: pointer;
+  z-index: 3;
+}
+
+.echo_user nav{
+  background-color: rgba(0, 0, 0, 0.63);
+  backdrop-filter: blur(15px);
+  display: grid;
+  position: fixed;
+  padding: top;
+  top: -200px;
+  right: 0px;
+  padding-top: 0px;
+  z-index: -1;
+  transition: all 0.5s ease;
+  filter: opacity(0%);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+input[id="checkbox_user"]:checked ~ nav {
+  transition: 0.5;
+  transform: translateY(310px);
+  filter: opacity(100%);
+}
+
+.echo_user ul {
+  list-style: none;
+}
+
+.echo_user a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  margin-right: 25px;
+  padding: 10px 0px 10px 0px;
+  border: solid 1px #212529;
+  border-left: transparent;
+  border-right: transparent;
+  font-weight: bold;
+}
+
+.echo_user a:hover {
+  border-color: white;
+    transition: all 0.2s ease;
+}
+
+.sidebar_check{
+  background-color: transparent;
+  position: fixed;
+  display: flex;
+  top: 25px;
+  margin-right: 0px;
+  z-index: 3;
+}
+
+.sidebar_check img {
+  max-width: 50px;
+  filter: invert(100%);
+  cursor: pointer;
+}
+
+.sidebar_check img:hover{
+  filter: invert(75%);
+  transition: 0.2s;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.sidebar_content nav {
+  background-color: rgba(0, 0, 0, 0.63);
+  backdrop-filter: blur(15px);
+  display: grid;
+  position: fixed;
+  padding: top;
+  top: 80px;
+  left: -350px;
+  padding-bottom: 100%;
+  padding-right: 350px;
+  padding-top: 65px;
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+
+
+
+input[id="checkbox"]:checked ~ nav {
+  transition: 0.5;
+  transform: translateX(350px);
+}
+
+.sidebar .sidebar_content {
+  margin-left: -25px;
+  font-size: 35px;
+  display: block;
+  position: relative;
+}
+
+.sidebar ul{
+  list-style: none;
+  position: absolute;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 10px 0px 10px 0px;
+  border: solid 1px #212529;
+  border-left: transparent;
+  border-right: transparent;
+}
+.sidebar a:hover{
+  border-color: white;
+  transition: 0.2s;
+}
+
+.carro_container{
+  background-color: white;
+  margin: 90px 70px;
+  padding: 50px 50px;
+}
+
+.carro_grid{
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  gap: 50px;
+  margin-bottom: 16px;
+  
+}
+
+.carro_grid .carro_img img{
+  max-width: 250px;
+}
+
+.carro_grid .carro{
+  display: flex;
+  padding: 60px 25px;
+  border-radius: 15px;
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+  animation: anuncio_transicao 1.8s;
+}
+
+@keyframes anuncio_transicao {
+  0%{
+    filter: opacity(0%);
+      padding: 0px 25px;
+
+  }
+
+  25%{
+    filter: opacity(0%);
+      padding: 0px 25px;
+
+  }
+
+
+  100%{
+    filter: opacity(100%);
+      padding: 60px 25px;
+  }
+}
+
+.carro_grid .carro_img{
+  position: relative;
+  margin-top: 25px;
+}
+
+.carro_detalhes {
+  font-size: 20px;
+  position: relative;
+  top: 0px;
+  text-align: left;
+  margin: 0px 20px;
+  color: black;
+}
+
+.PreçoCarro {
+  font-size: 1.5em;
+  color: green;
+}
+
+.carro .btn_detalhes{
+  background-color: rgb(226, 0, 0);
+  color: white;
+  font-size: 20px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+}
+
+.carro .btn_detalhes:hover {
+  cursor: pointer;
+}
+
+.carro_container .mais_carros{
+  font-size: 40px;
+  font-weight: bolder;
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  border-top: solid 2px red;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carro_container .mais_carros:hover{
+  border-color: rgb(65, 0, 0);
+}
+
+footer{
+  color: white;
+}
+
+.footer_grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  left: 70px;
+  top: 0px;
+}
+
+.footer_grid .bloco_esquerdo{
+  font-size: 20px;
+
+}
+
+.footer_grid .bloco_central{
+  font-size: 21;
+}
+
+.footer_grid .bloco_direito{
+  max-width: 25px;
+  margin-top: -90px;
+}
+
+.footer_grid .direitos_reservados{
+  display: flex;
+  position: relative;
+  justify-content: left;
+}

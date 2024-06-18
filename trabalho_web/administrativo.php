@@ -1,0 +1,198 @@
+<?php
+session_start();
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konkista veiculos</title>
+  <link rel="icon" type="image/x-icon" href="./img/favicon-car.png">
+  <link rel="stylesheet" href="./styles/principal.css"></head>
+<body>
+  <!-- cabeçalho -->
+  <header>
+    <div class="cabeçalho">
+      <div class="konquita_logo">
+        <img src="./img/logokonkista2.png">
+      </div>
+      <div class="login_container">
+        <div class="echo_user">
+            <div class="user_grid">
+          <?php
+            if(!empty($_SESSION['id'])){
+              echo "<div class='bv_user'>".$_SESSION['nome']."</div>";
+            }else{
+              header("Location: login.php");	
+            }
+          ?>
+              <label for="checkbox_user">
+                <img id="user_icon" src="./img/down-arrow.png">
+              </label>
+            </div>
+            <input type="checkbox" id="checkbox_user">
+            <nav>
+              <ul>
+                <li><a href="">Perfil</a></li>
+                <li><a href="">Historico de Compras</a></li>
+                <li><a href="">Configurações</a></li>
+                <li><a class='logout' href='pagina.html'>Sair</a></li>
+              </ul>
+            </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    <!-- Botão da barra lateral -->
+    <div class="sidebar_check">
+      <label for="checkbox">
+        <img src="./img/menu_icon.png">
+      </label>
+    </div>
+
+  <!-- Barra lateral -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar_content">
+      <input type="checkbox" id="checkbox">
+      <nav>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Produtos</a></li>
+          <li><a href="">Contato</a></li>
+          <li><a href="">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Sessão de anuncios -->
+  <main>
+    <div class="carro_container">
+      <div class="carro_grid">   
+        <!-- Carro 1 -->
+        <div class="carro">
+          <div class="carro_img">
+            <img src="img/bmwpsd.png" alt="bmw 320I" class="ImagemCarro">
+          </div>
+          <div class="carro_detalhes">
+            <h3>BMW 320I</h3>
+            <p><strong>Ano:</strong> 2023</p>
+        
+            <p><strong>Quilometragem:</strong> 50,000 km</p>
+            <p class="PreçoCarro">$250,000</p>
+            <a href=""><button class="btn_detalhes">Veja mais detalhes</button></a>
+          </div>
+        </div>
+
+        <!-- Carro 2 -->
+        <div class="carro">
+          <div class="carro_img">
+            <img src="img/bmw_PNG1710.png" alt="bmw 320I" class="ImagemCarro">
+          </div>
+          <div class="carro_detalhes">
+            <h3>BMW 335i M Sport</h3>
+            <p><strong>Ano:</strong> 2013</p>
+            
+            <p><strong>Quilometragem:</strong> 62,000 km</p>
+            <p class="PreçoCarro">$140,000</p>
+            <a href=""><button class="btn_detalhes">Veja mais detalhes</button></a>
+          </div>
+        </div>
+
+        <!-- Carro 3 -->
+        <div class="carro">
+          <div class="carro_img">
+            <img src="img/mercedes_PNG1897.png" alt="bmw 320I" class="ImagemCarro">
+          </div>
+          <div class="carro_detalhes">
+              <h3>MERCEDES-BENZ G550 4X4</h3>
+              <p><strong>Ano:</strong> 2017</p>
+              
+              <p><strong>Quilometragem:</strong> 60,000 km</p>
+              <p class="PreçoCarro">$1.050,000</p>
+            <a href=""><button class="btn_detalhes">Veja mais detalhes</button></a>
+          </div>
+        </div>
+
+
+        <!-- Carro 4 -->
+        <div class="carro">
+          <div class="carro_img">
+            <img src="img/range-rover-velar-8236-0.png" alt="bmw 320I" class="ImagemCarro">
+          </div>
+          <div class="carro_detalhes">
+              <h3>Land Rover</h3>
+              <p><strong>Ano:</strong> 2021</p>
+              
+              <p><strong>Quilometragem:</strong> 55,000 km</p>
+              <p class="PreçoCarro">$550,000</p>
+            <a href=""><button class="btn_detalhes">Veja mais detalhes</button></a>
+          </div>
+        </div>
+
+        <!-- Carro 5 -->
+        <div class="carro">
+          <div class="carro_img">
+            <img src="img/audi_PNG1771.png" alt="bmw 320I" class="ImagemCarro">
+          </div>
+          <div class="carro_detalhes">
+              <h3>R8 TT RS AUDI</h3>
+              <p><strong>Ano:</strong> 2021</p>
+              
+              <p><strong>Quilometragem:</strong> 44,000 km</p>
+              <p class="PreçoCarro">$1.640,000</p>
+            <a href=""><button class="btn_detalhes">Veja mais detalhes</button></a>
+          </div>
+        </div>
+
+        <!-- Carro 6 -->
+        <div class="carro">
+          <div class="carro_img">
+            <img src="img/vehicle.png" alt="bmw 320I" class="ImagemCarro">
+          </div>
+          <div class="carro_detalhes">
+              <h3>Ford Mustang</h3>
+              <p><strong>Ano:</strong> 2023</p>
+              
+              <p><strong>Quilometragem:</strong> 70,000 km</p>
+              <p class="PreçoCarro">$540,000</p>
+            <a href=""><button class="btn_detalhes">Veja mais detalhes</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="mais_carros">
+        <a>CONFIRA MAIS VEÍCULOS</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="footer_grid">
+      <div class="bloco_esquerdo">
+        <h3>KONKISTA VEÍCULOS</h3>
+        <p>Marcas de Luxo</p>
+      </div>
+      <div class="bloco_central">
+        <h3>CONTATO</h3>
+        <p>Rua Alegre, 123 (Centro)</p>
+        <p>CEP 12345-789 - Juiz de Fora - MG</p>
+        <p>(32) 91234-4567</p>
+      </div>
+      <div class="bloco_direito">
+        <img src="img/logokonkista.png" width="300px" alt="Imagem do Rodapé">
+      </div>
+      <div class="direitos_reservados">
+        <p>&copy; 2023 KONKISTA Veículos. Todos os direitos reservados.</p>
+      </div>
+    </div>
+    
+  </footer>
+
+
+</body>
+</html>
